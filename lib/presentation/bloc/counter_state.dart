@@ -3,7 +3,5 @@ class CounterState {
 
   CounterState({this.counterValue});
 
-  CounterState copyWith({int? counterValue}) {
-    return CounterState(counterValue: counterValue ?? this.counterValue);
-  }
+  CounterState copyWith({int? counterValue}) => CounterState(counterValue: counterValue ?? this.counterValue);
 }
