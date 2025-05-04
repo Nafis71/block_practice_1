@@ -59,6 +59,14 @@ class _BlocCounterState extends State<BlocCounter> {
               _counterBloc.add(CounterDecrement());
             },
           ),
+          SizedBox(height: 8),
+          FloatingActionButton(
+            heroTag: "-223",
+            child: Icon(Icons.lock_reset),
+            onPressed: () {
+              _counterBloc.add(CounterReset());
+            },
+          ),
         ],
       ),
     );

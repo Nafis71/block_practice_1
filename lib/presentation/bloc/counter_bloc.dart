@@ -10,5 +10,6 @@ class CounterBloc extends Bloc<CounterEvent, CounterState> {
   CounterBloc(this._counterBlocUseCase,) : super(CounterState()) {
     on<CounterIncrement>((event, emit) => emit(state.copyWith(counterValue: _counterBlocUseCase.incrementCounter(state.counterValue ?? 0))));
     on<CounterDecrement>((event, emit) => emit(state.copyWith(counterValue: _counterBlocUseCase.decrementCounter(state.counterValue ?? 0))));
+    on<CounterReset>((event, emit) => emit(state.copyWith(counterValue: 0)));
   }
 }
