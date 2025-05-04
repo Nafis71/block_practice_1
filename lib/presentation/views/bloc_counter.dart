@@ -1,8 +1,6 @@
 import 'package:block_practice_1/presentation/bloc/counter_bloc.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-
-import '../bloc/counter_events.dart';
 import '../bloc/counter_state.dart';
 
 class BlocCounter extends StatefulWidget {

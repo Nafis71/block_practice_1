@@ -1,7 +1,9 @@
+part of "counter_bloc.dart";
+
 sealed class CounterEvent {} // it only allows its sub classes to extend it only within this file/library scope
 
-class CounterIncrement extends CounterEvent {}
+final class CounterIncrement extends CounterEvent {}
 
-class CounterDecrement extends CounterEvent {}
+final class CounterDecrement extends CounterEvent {}
 
-class CounterReset extends CounterEvent{}
+final class CounterReset extends CounterEvent{}
