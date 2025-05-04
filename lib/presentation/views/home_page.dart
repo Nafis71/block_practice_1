@@ -12,7 +12,6 @@ class HomePage extends StatefulWidget {
 }
 
 class _HomePageState extends State<HomePage> {
-
   late final CounterCubit _counterCubit;
 
   @override
@@ -38,7 +37,14 @@ class _HomePageState extends State<HomePage> {
           ],
         ),
       ),
-      floatingActionButton: FloatingActionButton(onPressed: () => _counterCubit.incrementCounter(), tooltip: 'Increment', child: const Icon(Icons.add)),
+      floatingActionButton: Column(
+        mainAxisAlignment:  MainAxisAlignment.end,
+        children: [
+          FloatingActionButton(onPressed: () => _counterCubit.incrementCounter(), tooltip: 'Increment', child: const Icon(Icons.add)),
+          SizedBox(height: 8),
+          FloatingActionButton(onPressed: () => _counterCubit.decrementCounter(), tooltip: 'decrement', child: const Icon(Icons.remove)),
+        ],
+      ),
     );
   }
 }
